@@ -1,0 +1,125 @@
+{
+    "Simple Greeting Component": {
+      "prefix": "rts-greeting",
+      "body": [
+        "import React from 'react';",
+        "",
+        "interface GreetingProps {",
+        "    name: string;",
+        "    message: string;",
+        "}",
+        "",
+        "const Greeting: React.FC<GreetingProps> = ({ name, message }) => (",
+        "    <div>",
+        "        <h1>Hello, ${1:${name}}!</h1>",
+        "        <p>${2:${message}}</p>",
+        "    </div>",
+        ");",
+        "",
+        "export default Greeting;"
+      ],
+      "description": "A simple greeting component with name and message props."
+    },
+    "User Profile Card": {
+      "prefix": "rts-user-profile",
+      "body": [
+        "import React from 'react';",
+        "",
+        "interface UserProfileProps {",
+        "    avatarUrl: string;",
+        "    username: string;",
+        "    bio: string;",
+        "}",
+        "",
+        "const UserProfile: React.FC<UserProfileProps> = ({ avatarUrl, username, bio }) => (",
+        "    <div className=\"user-profile\">",
+        "        <img src=\"${1:${avatarUrl}}\" alt=\"${2:${username}}'s avatar\" className=\"avatar\" />",
+        "        <h2>${3:${username}}</h2>",
+        "        <p>${4:${bio}}</p>",
+        "    </div>",
+        ");",
+        "",
+        "export default UserProfile;"
+      ],
+      "description": "A user profile card component with avatar, username, and bio."
+    },
+    "Product Listing Item": {
+      "prefix": "rts-product",
+      "body": [
+        "import React from 'react';",
+        "",
+        "interface ProductProps {",
+        "    title: string;",
+        "    price: number;",
+        "    imageUrl: string;",
+        "}",
+        "",
+        "const Product: React.FC<ProductProps> = ({ title, price, imageUrl }) => (",
+        "    <div className=\"product-item\">",
+        "        <img src=\"${1:${imageUrl}}\" alt=\"${2:${title}}\" className=\"product-image\" />",
+        "        <h3>${3:${title}}</h3>",
+        "        <p>$${4:${price.toFixed(2)}}</p>",
+        "    </div>",
+        ");",
+        "",
+        "export default Product;"
+      ],
+      "description": "A product listing item with title, price, and image."
+    },
+    "Navigation Bar": {
+      "prefix": "rts-navbar",
+      "body": [
+        "import React from 'react';",
+        "",
+        "interface NavLinkProps {",
+        "    href: string;",
+        "    label: string;",
+        "}",
+        "",
+        "const NavLink: React.FC<NavLinkProps> = ({ href, label }) => (",
+        "    <a href=\"${1:${href}}\" className=\"nav-link\">",
+        "        ${2:${label}}",
+        "    </a>",
+        ");",
+        "",
+        "const NavBar: React.FC = () => (",
+        "    <nav className=\"navbar\">",
+        "        <NavLink href=\"#home\" label=\"Home\" />",
+        "        <NavLink href=\"#about\" label=\"About\" />",
+        "        <NavLink href=\"#services\" label=\"Services\" />",
+        "        <NavLink href=\"#contact\" label=\"Contact\" />",
+        "    </nav>",
+        ");",
+        "",
+        "export default NavBar;"
+      ],
+      "description": "A navigation bar with links."
+    },
+    "Simple Blog Post Preview": {
+      "prefix": "rts-blog-post",
+      "body": [
+        "import React from 'react';",
+        "",
+        "interface BlogPostProps {",
+        "    title: string;",
+        "    excerpt: string;",
+        "    author: string;",
+        "    date: string;",
+        "}",
+        "",
+        "const BlogPost: React.FC<BlogPostProps> = ({ title, excerpt, author, date }) => (",
+        "    <article className=\"blog-post\">",
+        "        <h2>${1:${title}}</h2>",
+        "        <p>${2:${excerpt}}</p>",
+        "        <small>",
+        "            By ${3:${author}} on ${4:${date}}",
+        "        </small>",
+        "    </article>",
+        ");",
+        "",
+        "export default BlogPost;"
+      ],
+      "description": "A blog post preview with title, excerpt, author, and date."
+    }
+  }
+  
